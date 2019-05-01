@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before{
+  box-sizing: border-box;
+}
+*::after{
+  box-sizing: border-box;
+}
+body{
+  background: #D4ECF9;
+}
+.doraemon{
+  width: 100%;
+  text-align: center;
+}
+.wrapper{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.container{
+  width: 280px;
+  height: 320px;
+  position: relative;
+}
+#paper{
+  width: 50%;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+}
+#code{
+  padding: 16px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #aaa;
+}
+.pre-wrapper{
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
