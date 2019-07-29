@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./default.css">
-  <title>多啦A梦</title>
+  <link rel="stylesheet">
+  <title>哆啦A梦</title>
   <style id="styleTag"></style>
 </head>
 
@@ -15,6 +15,12 @@
   </div>
   <div id="paper">
     <pre id="code"></pre>
+    <div class="changeSpeed">
+      <button data-speed="0.5">2倍</button>
+      <button data-speed="1" class="active">1倍</button>
+      <button data-speed="2">0.5倍</button>
+      <button>结束</button>
+    </div>
   </div>
   <div class="pre-wrapper">
     <div class="wrapper">
@@ -58,6 +64,17 @@
       </div>
     </div>
   </div>
+  <script>
+    change()
+    window.addEventListener('resize',change)
+    function change(){
+      if(document.documentElement.clientWidth >= 800){
+        document.querySelector('link').href = './default.css'
+      }else{
+        document.querySelector('link').href = './phone.css'
+      }
+    }
+  </script>
   <script src="main.js"></script>
 </body>
 

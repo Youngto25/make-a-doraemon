@@ -1,16 +1,38 @@
+let interval = 5
+let write = true
+let buttons = document.querySelectorAll('.changeSpeed button')
+
+for(let i=0; i<buttons.length; i++){
+  buttons[i].addEventListener('click',function(e){
+    let speed = +this.getAttribute('data-speed')
+    if(speed){
+      console.log(typeof speed)
+      interval *= speed
+    }else{
+      write = false
+      document.querySelector('#code').innerHTML = code
+      document.querySelector('#styleTag').innerHTML = code
+    }
+    buttons.forEach((button)=>{
+      button.classList.remove('active')
+    })
+    this.classList.add('active')
+  })
+}
+
 function writeCode(prefix,code,fn){
   let domCode = document.querySelector('#code');
   let styleTag = document.querySelector('#styleTag');
   let n = 0;
-  let timer = setInterval(()=>{
-    n += 1;
-    domCode.innerHTML = prefix + code.substring(0,n);
+  setTimeout(function x(){
+    if(!write) return
+    n += 1
+    domCode.innerHTML = prefix + code.substring(0,n)
     styleTag.innerHTML = prefix + code.substring(0,n);
     domCode.scrollTop = domCode.scrollHeight;
-    if(n>=code.length){
-      window.clearInterval(timer);
-    }
-  },5);
+    if(n>=code.length) return
+    setTimeout(x,interval)
+  },interval)
 };
 
 let code=`/*
