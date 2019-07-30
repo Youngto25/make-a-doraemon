@@ -1,3 +1,4 @@
+[toc]
 ## make-a-doraemon
 ### 描述
 哆啦A梦的制作过程。<br>
@@ -16,13 +17,14 @@
 ```
 let code = `哆啦A梦的样式`
 ```
-#### 声明方法writeCode
+#### 声明函数writeCode
 利用setTimeout实现setInterval，通过按钮改变interval的值来改变innerHTML的加载速率。
 通过substring来逐步加载code。
 当结束按钮被点击时，wirte值被改变，跳出定时器，不再进行递归。
 ```
 let interval = 5
 let write = true
+
 function writeCode(code){
   let domCode = document.querySelector('#code')
   let styleTag = document.querySelector('#styleTag')
@@ -37,6 +39,8 @@ function writeCode(code){
     setTimeout(x,interval)
   },interval)
 }
+
+
 ```
 
 ### 移动端的适配方法
