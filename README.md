@@ -1,6 +1,7 @@
 ## make-a-doraemon
 ### 描述
-利用 html css js 制作一个哆啦A梦。
+哆啦A梦的制作过程。<br>
+技术栈：HTML5 ES6
 
 ### 效果
 ![效果图](https://github.com/Youngto25/make-a-doraemon/raw/master/image/xxx.jpg)
