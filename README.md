@@ -1,10 +1,9 @@
-[toc]
-## make-a-doraemon
-### 描述
+# make-a-doraemon
+## 描述
 哆啦A梦的制作过程。<br>
 技术栈：HTML5 ES6
 
-### 效果
+## 效果
 ![效果图](https://github.com/Youngto25/make-a-doraemon/blob/master/image/xxx.jpg)
 - 动态生成哆啦A梦
 - 可以调整生成速率
@@ -40,7 +39,7 @@ function writeCode(code){
   },interval)
 }
 
-
+writeCode(code)
 ```
 
 ### 移动端的适配方法
